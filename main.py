@@ -1,6 +1,7 @@
-# detta är min första kod
-# testar att commita i github
-# vad händer
-print('hello world')
-print('nu gör jag  en ändring')
-print('nu gör jag  en ändring till')
+# nu är det på riktigt!
+
+import numpy as np
+
+pfield = np.array([[1, 0, 1], [1, 0, 1]])
+
+print(pfield)
