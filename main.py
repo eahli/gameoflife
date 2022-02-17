@@ -1,4 +1,5 @@
 # nu är det på riktigt!
+# detta är ändringar från jobdator torsdag
 import random as random
 import numpy as np
 
