@@ -1,15 +1,15 @@
 #Conway's game of life
+#detta skall bli en klass/modul som tar in en matris och ger tillbaka vilka som lever och dör
 
 import random
 import numpy
-import gol
 
-gol.golmatrix(numpy.zeros(shape=(psize,psize)))
+def wholives(golmatrix):
 
 #detta definerar storleken på spelfältet
-psize = 300
+psize = golmatrix
 
-gol.golmatrix(numpy.zeros(shape=(psize,psize)))
+
 
 pfield = numpy.zeros(shape=(psize,psize))
 
