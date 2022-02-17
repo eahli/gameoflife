@@ -1,7 +1,4 @@
-#Any live cell with fewer than two live neighbors dies, as if by loneliness.
-#Any live cell with more than three live neighbors dies, as if by overcrowding.
-#Any live cell with two or three live neighbors lives, unchanged, to the next generation.
-#Any dead cell with exactly three live neighbors comes to life
+#game of life
 
 import random as random
 import numpy as numpy
@@ -54,4 +51,21 @@ for x in range(1,psize-1):
 
 print(neighbours)
 
+print(' \n vilka dör, lever och föds \n')
 
+#Any live cell with fewer than two live neighbors dies, as if by loneliness.
+#Any live cell with more than three live neighbors dies, as if by overcrowding.
+#Any live cell with two or three live neighbors lives, unchanged, to the next generation.
+#Any dead cell with exactly three live neighbors comes to life
+
+for x in range(0,psize):
+    for y in range(0,psize):
+        if neighbours[x][y] < 2 :
+            pfield[x][y]=0
+        if neighbours[x][y] > 3 :
+            pfield[x][y]=0
+        if pfield[x][y] == 0 and neighbours[x][y] == 3:
+            pfield[x][y] = 1
+
+
+print(pfield)
