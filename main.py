@@ -1,13 +1,13 @@
 # nu är det på riktigt!
 # detta är ändringar från jobdator torsdag
 import random as random
-import numpy as np
+import numpy as numpy
 
-#detta definerar storleken på spelfältet, tänk på att det börjar med 0
+#detta definerar storleken på spelfältet
 pfieldx = 3
 pfieldy = 3
 
-pfield = np.matrix([[0, 0, 0], [0, 0, 0], [0, 0, 0]])
+pfield = numpy.zeros(shape=(pfieldx,pfieldy))
 
 print(pfield)
 
