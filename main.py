@@ -5,7 +5,9 @@ import numpy
 import gol
 import dplay
 
-psize = input("Hur stort skall spelfältet vara? ")
+psize = dplay.greeting()
+
+# psize = input("Hur stort skall spelfältet vara? ")
 psize = int(psize)
 seedm = numpy.zeros(shape=(psize, psize))
 
