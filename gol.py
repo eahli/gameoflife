@@ -1,24 +1,15 @@
 #Conway's game of life
-#detta skall bli en klass/modul som tar in en matris och ger tillbaka vilka som lever och dör
+#denna modul tar in en seed-matris och returnerar vem som överlver
 
 import numpy
 
-def wholives(seedmatrix):
-    pfield = seedmatrix
+def wholives(pfield):
 
-    # detta definerar storleken på spelfältet
-    psize = len(seedmatrix)
+    # detta räknar ut storleken på spelfältet
+    psize = len(pfield)
+
+    # detta är matrisen där antalet grannar räknas fram, börjar med nollor
     neighbours = numpy.zeros(shape=(psize, psize))
-
-
-
-
-
-    # print(pfield)
-
-    # print(' \n och nu skall vi räkna ut antalet grannar i varje cell  \n')
-
-
 
     # räkna grannar i hörnorna
     neighbours[0][0] = pfield[0][1]+pfield[1][0]+pfield[1][1]
@@ -47,10 +38,7 @@ def wholives(seedmatrix):
         for y in range(1,psize-1):
             neighbours[x][y]=pfield[x-1][y-1]+pfield[x-1][y]+pfield[x-1][y+1]+pfield[x][y-1]+pfield[x][y+1]+pfield[x+1][y-1]+pfield[x+1][y]+pfield[x+1][y+1]
 
-    # print(neighbours)
-
-    # print(' \n vilka dör, lever och föds \n')
-
+    # Nu bestämmer vi om en cell dör, föds eller lever enligt nedan regler.
     # Any live cell with fewer than two live neighbors dies, as if by loneliness.
     # Any live cell with more than three live neighbors dies, as if by overcrowding.
     # Any live cell with two or three live neighbors lives, unchanged, to the next generation.
