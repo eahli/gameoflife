@@ -2,7 +2,6 @@
 
 import numpy
 import tkinter as tk
-import pygame
 
 
 def show(pfield):
